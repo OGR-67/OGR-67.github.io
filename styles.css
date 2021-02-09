@@ -1,0 +1,123 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);/*importe une police*/
+
+body {/* reglage general de la page en couleur, police et en marge */
+  color: #555;
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+#header {/* Couleur de fond, hauteur et centrage de l'entete */
+  background-color: #1abc9c;
+  height: 150px;
+  line-height: 150px;
+}
+
+#header a {/* couleur et style d'écriture des liens de l'entete */
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+#header a:hover {/* couleur survol lien entete */
+  color: #222
+}
+
+#header-title { /* titre entete */
+  display: block;
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#header-nav { /* navigation entete */
+  display: block;
+  float: right;
+  margin-top: 0;
+}
+
+#header-nav li { /* liste navigation entete */
+  display: inline;
+  padding-left: 20px;
+}
+
+.container { /* classe contenant */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#footer { /* bas de page */
+  background-color: #2f2f2f;
+  padding: 50px 0;
+}
+
+.column { /* classe colonne */
+  min-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#footer h4 { /* titre bas de page */
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+#footer p { /* paragraphe bas de page */
+  color: white;
+}
+
+a { /* liens */
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+a:hover { /* couleur survol liens */
+  color: #F6A623;
+}
+
+.post, .about { /* classe post et about */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.post-author img { /* image de l'auteur de post */
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.post-author span { /* span de post-author */
+  margin-left: 16px;
+}
+
+.post-date { /* date */
+  color: #d2d2d2;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h1,h2,h3,h4 { /* couler des titres */
+  color: #333
+}
+
+p { /* paragraphe */
+  line-height: 1.5;
+}
+
+.about { /* classe about */
+  text-align: center;
+}
+
+.post-author img, .about-title img { /* arrondire les image de post et dans about */
+  border-radius: 50%;
+}
+.post-container:nth-child(even) { /* alternantce de couleur d'un post a l'autre */
+  background-color: #f2f2f2;
+}
