@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <title>You encounter monsters!</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1100" height="620"></canvas>
+    <div style="display:none;">
+      <img id="warriorImg" src="warrior.png">
+      <img id="casterImg" src="caster.png">
+      <img id="rangerImg" src="ranger.png">
+      <img id="ennemi1Img" src="ennemi1.png">
+      <img id="ennemi2Img" src="ennemi2.png">
+      <audio src="Battle-Music-2.mp3" autoplay="true" loop="true"></audio>
+    </div>
+    <input type="checkbox" id="attack">
+    <input type="checkbox" id="heal">
+    <span class="menu" id="warrior-menu">
+      <h4>Warrior</h4>
+      <label for="attack"><button>Attaquer</button></label>
+      <br>
+      <button id="defend" onclick="defend()">Défendre</button>
+    </span>
+    <span class="menu" id="caster-menu">
+      <h4>Caster</h4>
+      <label for="attack"><button>Attaquer</button></label>
+      <br>
+      <button id="aoe" onclick="aoe()"">Tempête</button>
+    </span>
+    <span class="menu" id="ranger-menu">
+      <h4>Ranger</h4>
+      <label for="attack"><button>Attaquer</button></label>
+      <br>
+      <label for="heal"><button>Soin</button></label>
+    </span>
+    <span class="target" id="idAttack-menu">
+      <h5>Choisisser une cible</h5>
+      <label for="attack"><button id="ennemi1" onclick="target1()">Squelette</button></label>
+      <br>
+      <label for="attack"><button id="ennemi2" onclick="target2()">Démon</button></label>
+      <br>
+      <label for="attack"><button>Retour</button></label>
+    </span>
+
+    <span class="target" id="heal-menu">
+      <h5>Choisisser une cible</h5>
+      <label for="heal"><button id="healWarrior" onclick="healWarrior()">Warrior</button></label>
+      <br>
+      <label for="heal"><button id="healCaster" onclick="healCaster()">Caster</button></label>
+      <br>
+      <label for="heal"><button id="healRanger" onclick="healRanger()">Ranger</button></label>
+      <br>
+      <label for="heal"><button>Retour</button></label>
+    </span>
+    <script src="script.js"></script>
+  </body>
+</html>
