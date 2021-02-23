@@ -88,7 +88,7 @@ function switchMenu() {
 //Action ennemi
 function ennemiTurn(){
   var whoIndice = getRandomInt(felows.length); //indice de liste aleatoire
-  var dmg = getRandomInt(20)+ 10; // dégats infligés
+  var dmg = getRandomInt(20)+ 30; // dÃ©gats infligÃ©s
   function who2var(x){return window[felows[x]];}//
   //fonction inputDamage
   function inputDamage(who,dmg){
@@ -140,7 +140,7 @@ function ennemiTurn(){
 
 //fonction attack
 function attack(who,withWho){
-  var dmg = getRandomInt(20); // dégats infligés
+  var dmg = getRandomInt(20); // dÃ©gats infligÃ©s
   switch (withWho) {
     case "warrior":
       warrior.go = true
@@ -180,15 +180,15 @@ function heal(who){
   switch (who) {
     case warrior:
       warrior.life += 20;
-      lastAction = warrior.name + " est soign� de " + 20 + " PV"
+      lastAction = warrior.name + " est soigné de " + 20 + " PV"
       break;
     case caster:
       caster.life += 20;
-      lastAction = caster.name + " est soign� de " + 20 + " PV"
+      lastAction = caster.name + " est soigné de " + 20 + " PV"
       break;
     case ranger:
       ranger.life += 20;
-      lastAction = ranger.name + " est soign� de " + 20 + " PV"
+      lastAction = ranger.name + " est soigné de " + 20 + " PV"
       break;
   }
   if (who.life >= 100){who.life=100;}
@@ -211,7 +211,7 @@ function aoe(){
       window[foes[i]].life = 0;
       window[foes[i]].isDead = true;
     }
-    lastAction = caster.name + " utilise temp�te!!!"
+    lastAction = caster.name + " utilise tempête!!!"
   }
   var time = setTimeout(endTurn, 1300);
 }//
@@ -411,7 +411,7 @@ function draw() {
 function defend(){
   defense.play();
   warrior.defending = !warrior.defending;
-  lastAction = warrior.name + " d�fend le groupe!"
+  lastAction = warrior.name + " défend le groupe!"
   var time = setTimeout(endTurn, 1300);
 }
 
